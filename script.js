@@ -2,7 +2,7 @@
 
 // Get DOM elements
 const openModalBtn = document.getElementById("openModalBtn");
-const modal = document.getElementById("formModal");
+const modal = document.getElementById("queryModal");
 const closeBtn = document.querySelector(".close-btn");
 const form = document.getElementById("queryForm");
 
@@ -58,7 +58,7 @@ form.addEventListener("submit", async (event) => {
 
   // Submit form data to API
   try {
-    const response = await fetch("https://api.justwravel.com/api/query", {
+    const response = await fetch("https://api.jw.in/query", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

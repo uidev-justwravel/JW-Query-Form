@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Modal</title>
+  <title>Query Form Modal</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/react-phone-input-2/7.0.0/style.css">
 </head>
 <body>
   <!-- Button to open the modal -->
-  <button id="openModalBtn" class="open-modal-btn">Open Form</button>
+  <button id="openModalBtn" class="open-modal-btn">Open Query Form</button>
 
   <!-- Modal -->
-  <div id="formModal" class="modal">
+  <div id="queryModal" class="modal">
     <div class="modal-content">
       <span class="close-btn">&times;</span>
       <h2>Submit Your Query</h2>
@@ -66,6 +67,32 @@
             <option value="Kerala">Kerala</option>
           </select>
           <div class="error-message" id="location_error"></div>
+        </div>
+
+        <!-- Preferred Date -->
+        <div class="form-group">
+          <label for="prefered_date">Preferred Date</label>
+          <input type="date" id="prefered_date" name="prefered_date">
+          <div class="error-message" id="prefered_date_error"></div>
+        </div>
+
+        <!-- Budget -->
+        <div class="form-group">
+          <label for="budget">Budget</label>
+          <select id="budget" name="budget">
+            <option value="">Select budget</option>
+            <option value="Below 20K">Below 20K</option>
+            <option value="20K to 50K">20K to 50K</option>
+            <option value="Above 50K">Above 50K</option>
+          </select>
+          <div class="error-message" id="budget_error"></div>
+        </div>
+
+        <!-- Query -->
+        <div class="form-group">
+          <label for="query">Your Query</label>
+          <textarea id="query" name="query"></textarea>
+          <div class="error-message" id="query_error"></div>
         </div>
 
         <!-- Submit Button -->
