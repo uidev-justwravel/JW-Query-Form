@@ -2,7 +2,7 @@
 
 // Get DOM elements
 const openModalBtn = document.getElementById("openModalBtn");
-const modal = document.getElementById("queryModal");
+const modal = document.getElementById("modal");
 const closeBtn = document.querySelector(".close-btn");
 const form = document.getElementById("queryForm");
 
@@ -45,13 +45,6 @@ form.addEventListener("submit", async (event) => {
     isValid = false;
   } else {
     document.getElementById("phone_error").textContent = "";
-  }
-
-  if (!data.category) {
-    document.getElementById("category_error").textContent = "Category is required.";
-    isValid = false;
-  } else {
-    document.getElementById("category_error").textContent = "";
   }
 
   if (!isValid) return;

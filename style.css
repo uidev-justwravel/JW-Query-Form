@@ -3,11 +3,13 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
 }
 
-/* Button to open the modal */
-.open-modal-btn {
+/* Fixed Button */
+.fixed-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   background-color: #007BFF;
   color: white;
   padding: 10px 20px;
@@ -15,10 +17,10 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  margin: 20px;
+  z-index: 1000;
 }
 
-.open-modal-btn:hover {
+.fixed-button:hover {
   background-color: #0056b3;
 }
 
@@ -40,7 +42,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   width: 90%;
-  max-width: 500px;
+  max-width: 400px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -71,7 +73,7 @@ label {
   margin-bottom: 5px;
 }
 
-input, select, textarea {
+input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;

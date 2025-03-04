@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Query Form Modal</title>
+  <title>Fixed Button with Modal Form</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/react-phone-input-2/7.0.0/style.css">
 </head>
 <body>
-  <!-- Button to open the modal -->
-  <button id="openModalBtn" class="open-modal-btn">Open Query Form</button>
+  <!-- Fixed Button -->
+  <button id="openModalBtn" class="fixed-button">Open Form</button>
 
   <!-- Modal -->
-  <div id="queryModal" class="modal">
+  <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close-btn">&times;</span>
       <h2>Submit Your Query</h2>
@@ -43,56 +42,6 @@
           <label for="phone">Phone <span class="required">*</span></label>
           <input type="tel" id="phone" name="phone" required>
           <div class="error-message" id="phone_error"></div>
-        </div>
-
-        <!-- Category -->
-        <div class="form-group">
-          <label for="category">What kind of trip do you prefer? <span class="required">*</span></label>
-          <select id="category" name="category" required>
-            <option value="">Select a category</option>
-            <option value="Backpacking Trips">Backpacking Trips</option>
-            <option value="Corporate Tours">Corporate Tours</option>
-            <option value="International Tours">International Tours</option>
-          </select>
-          <div class="error-message" id="category_error"></div>
-        </div>
-
-        <!-- Location -->
-        <div class="form-group">
-          <label for="location">Where do you want to go?</label>
-          <select id="location" name="location">
-            <option value="">Select a location</option>
-            <option value="Himalayas">Himalayas</option>
-            <option value="Goa">Goa</option>
-            <option value="Kerala">Kerala</option>
-          </select>
-          <div class="error-message" id="location_error"></div>
-        </div>
-
-        <!-- Preferred Date -->
-        <div class="form-group">
-          <label for="prefered_date">Preferred Date</label>
-          <input type="date" id="prefered_date" name="prefered_date">
-          <div class="error-message" id="prefered_date_error"></div>
-        </div>
-
-        <!-- Budget -->
-        <div class="form-group">
-          <label for="budget">Budget</label>
-          <select id="budget" name="budget">
-            <option value="">Select budget</option>
-            <option value="Below 20K">Below 20K</option>
-            <option value="20K to 50K">20K to 50K</option>
-            <option value="Above 50K">Above 50K</option>
-          </select>
-          <div class="error-message" id="budget_error"></div>
-        </div>
-
-        <!-- Query -->
-        <div class="form-group">
-          <label for="query">Your Query</label>
-          <textarea id="query" name="query"></textarea>
-          <div class="error-message" id="query_error"></div>
         </div>
 
         <!-- Submit Button -->
