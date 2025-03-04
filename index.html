@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Modal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Button to open the modal -->
+  <button id="openModalBtn" class="open-modal-btn">Open Form</button>
+
+  <!-- Modal -->
+  <div id="formModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Submit Your Query</h2>
+      <form id="queryForm">
+        <!-- First Name -->
+        <div class="form-group">
+          <label for="first_name">First Name <span class="required">*</span></label>
+          <input type="text" id="first_name" name="first_name" required>
+          <div class="error-message" id="first_name_error"></div>
+        </div>
+
+        <!-- Last Name -->
+        <div class="form-group">
+          <label for="last_name">Last Name</label>
+          <input type="text" id="last_name" name="last_name">
+          <div class="error-message" id="last_name_error"></div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+          <div class="error-message" id="email_error"></div>
+        </div>
+
+        <!-- Phone -->
+        <div class="form-group">
+          <label for="phone">Phone <span class="required">*</span></label>
+          <input type="tel" id="phone" name="phone" required>
+          <div class="error-message" id="phone_error"></div>
+        </div>
+
+        <!-- Category -->
+        <div class="form-group">
+          <label for="category">What kind of trip do you prefer? <span class="required">*</span></label>
+          <select id="category" name="category" required>
+            <option value="">Select a category</option>
+            <option value="Backpacking Trips">Backpacking Trips</option>
+            <option value="Corporate Tours">Corporate Tours</option>
+            <option value="International Tours">International Tours</option>
+          </select>
+          <div class="error-message" id="category_error"></div>
+        </div>
+
+        <!-- Location -->
+        <div class="form-group">
+          <label for="location">Where do you want to go?</label>
+          <select id="location" name="location">
+            <option value="">Select a location</option>
+            <option value="Himalayas">Himalayas</option>
+            <option value="Goa">Goa</option>
+            <option value="Kerala">Kerala</option>
+          </select>
+          <div class="error-message" id="location_error"></div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
